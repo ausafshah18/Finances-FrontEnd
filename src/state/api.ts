@@ -3,7 +3,7 @@ import {createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { GetKpisResponse, GetProductsResponse, GetTransactionsResponse } from "./types";
 
 export const api = createApi({  // createApi is a function of redux toolkit query
-    baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_BASE_URL }), // baseurl is in .env.local file
+    baseQuery: fetchBaseQuery({ baseUrl: "https://financebackend-8onb.onrender.com" }), // baseurl is in .env.local file
     reducerPath: "main",
     tagTypes: ["Kpis","Products","Transactions"], // used to save information like kpis and Products
     endpoints: (build) => ({ // this is where we actually create API calls
